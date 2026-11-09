@@ -4,7 +4,7 @@ Project Overview
 
 This project demonstrates a hybrid Identity and Access Management (IAM) environment integrating Microsoft Active Directory with Okta.
 
-The goal of this lab is to simulate real-world enterprise IAM operations, including user provisioning, access management, authentication, and automated Joiner-Mover-Leaver (JML) processes.
+The lab simulates enterprise IAM operations, including user provisioning, identity synchronization, role-based access control, authentication, multi-factor authentication, and automated Joiner-Mover-Leaver (JML) processes.
 
 Technologies Used
 
@@ -20,31 +20,33 @@ Technologies Used
 Key Features
 
 1. Active Directory Integration
-- Created and organized users, organizational units, and security groups.
+- Created and organized user accounts, organizational units (OUs), and security groups.
 - Integrated Active Directory with Okta.
-- Configured identity synchronization.
+- Configured identity synchronization between environments.
 
 2. Role-Based Access Control (RBAC)
-- Implemented role-based access controls.
-- Assigned permissions based on user roles and group membership.
-- Tested authorized and unauthorized access.
+- Implemented role-based access controls using security groups.
+- Organized users according to departments and job roles.
+- Tested authorized and unauthorized application access.
 
 3. Authentication and Security
 - Configured SAML and OIDC authentication.
-- Implemented MFA.
-- Tested authentication and access restrictions.
+- Implemented multi-factor authentication (MFA).
+- Tested authentication workflows and access restrictions.
 
 4. Identity Lifecycle Automation
-Developed PowerShell scripts to automate:
 
-- **Joiner:** Creating and provisioning new users.
-- **Mover:** Updating user access when roles or departments change.
-- **Leaver:** Disabling accounts and removing access when users leave the organization.
+Developed PowerShell scripts to automate Joiner-Mover-Leaver processes:
 
-5. IAM Reporting
-- Generated access reports.
-- Tracked account compliance.
-- Reviewed failed sign-in activity.
+- **Joiner:** Creates and provisions new user accounts.
+- **Mover:** Updates user information, group membership, and organizational placement when employees change departments.
+- **Leaver:** Disables accounts, removes group memberships, and revokes active Okta sessions.
+
+5. IAM Reporting and Monitoring
+- Generated reports identifying users, group memberships, and assigned applications.
+- Flagged inactive accounts and administrative access.
+- Reviewed failed sign-in activity through Okta System Log events.
+- Exported reports for access monitoring and compliance review.
 
 Repository Structure
 
@@ -68,9 +70,11 @@ okta-ad-iam-lab/
 └── .gitignore
 ```
 
-Screenshots and Demonstrations
+Screenshots and Documentation
 
-Screenshots documenting the lab configuration, authentication tests, automation workflows, and reporting will be included in the `docs/screenshots/` directory.
+Screenshots documenting the lab environment, identity synchronization, user and group configurations, authentication workflows, and automation results are available in:
+
+`docs/screenshots/`
 
 Skills Demonstrated
 
@@ -82,14 +86,18 @@ Skills Demonstrated
 - Identity Lifecycle Management
 - SAML and OIDC Authentication
 - Multi-Factor Authentication
-- Access Governance and Reporting
+- Access Governance
+- Account Provisioning and Deprovisioning
+- Security Monitoring and Reporting
 
 Future Improvements
 
 - Integrate additional enterprise applications.
 - Expand automated access reviews.
 - Implement more advanced conditional access policies.
-- Improve logging and monitoring.
-- Explore additional identity governance capabilities.
+- Improve centralized logging and monitoring.
+- Explore additional identity governance and administration (IGA) capabilities.
 
----
+Disclaimer
+
+This project was developed in a controlled home lab environment for educational purposes. All users and sample data are fictional. No production credentials, API tokens, or sensitive organizational information should be included in this repository.
