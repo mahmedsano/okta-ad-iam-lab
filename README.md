@@ -3,6 +3,8 @@ Okta + Active Directory IAM Home Lab
 Project Overview
 
 This project demonstrates a hybrid Identity and Access Management (IAM) environment integrating Microsoft Active Directory with Okta.
+IAM Architecture:
+![Okta and Active Directory IAM Architecture](docs/architecture.png)
 
 The lab simulates enterprise IAM operations, including user provisioning, identity synchronization, role-based access control, authentication, multi-factor authentication, and automated Joiner-Mover-Leaver (JML) processes.
 
