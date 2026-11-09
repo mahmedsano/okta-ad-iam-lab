@@ -1,0 +1,8 @@
+# Generated reports and audit logs
+*_log.csv
+access_report.csv
+failed_signins.csv
+
+# Local secrets and environment files
+.env
+*.secret
